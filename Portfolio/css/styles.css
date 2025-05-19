@@ -45,14 +45,14 @@ h2 {
 /* Heading hover effect */
 h1:hover,
 h2:hover {
-  color: #007bff; /* Change color on hover */
+  color: #337bff; /* Change color on hover */
   transform: scale(1.05);
   transition: transform 0.5s, color 0.5s;
 }
 
 .light-text {
   /* Renamed class */
-  color: #f8f9fa; /* Light color for text over dark backgrounds */
+  color: #fFf9fa; /* Light color for text over dark backgrounds */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add text shadow */
 }
 
@@ -63,7 +63,7 @@ p {
   font-size: 1.6vw; /* Adjusted paragraph size */
   line-height: 1.6; /* Improve readability */
   padding: 0 1.5vw; /* Adjusted padding */
-  color: #555; /* Standard text color */
+  color: #777; /* Standard text color */
 }
 
 p:hover {
@@ -82,14 +82,14 @@ p:hover {
 }
 
 a {
-  color: #0056b3; /* Standard link color */
+  color: #2256b3; /* Standard link color */
   cursor: pointer;
   text-decoration: none; /* Remove underline by default */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
 a:hover {
-  color: #003d80; /* Darker link color on hover */
+  color: #223d80; /* Darker link color on hover */
   text-decoration: underline; /* Add underline on hover */
 }
 
@@ -116,19 +116,19 @@ img:hover {
   /* Renamed class */
   padding: 1.5% 1%; /* Adjusted padding */
   background-color: #000; /* Dark footer background */
-  color: #f8f9fa; /* Light text color */
+  color: #fff9fa; /* Light text color */
   text-align: center; /* Center footer text */
   font-size: 1.2vw; /* Smaller footer font */
 }
 .SiteFooter p {
   text-align: center; /* Ensure paragraph inside is centered */
-  color: #adb5bd; /* Lighter grey for footer text */
+  color: #ceb5bd; /* Lighter grey for footer text */
 }
 .SiteFooter a {
-  color: #6ffea8; /* Light blue links in footer */
+  color: #cffea8; /* Light blue links in footer */
 }
 .SiteFooter a:hover {
-  color: #99ddff; /* Lighter blue on hover */
+  color: #cfddff; /* Lighter blue on hover */
 }
 /***** End Global Styles *****/
 
@@ -422,7 +422,7 @@ img:hover {
   right: 20px;
   width: auto; /* Auto width based on content */
   padding: 12px 20px; /* Adjust padding */
-  background-color: #007bff; /* Blue button */
+  background-color: #cf7bff; 
   color: white;
   border: none; /* No border */
   border-radius: 5px;
@@ -434,7 +434,7 @@ img:hover {
   animation: popUpButtonAnimation 1s ease-out 1s backwards; /* Renamed animation, added delay */
 }
 .ContactPopupButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #cf56b3; /* Darker blue on hover */
 }
 
 /* Renamed animation */
