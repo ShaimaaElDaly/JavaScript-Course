@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My One-Page Website</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background-color: #FFF;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 10px;
+    }
+
+    nav ul li a {
+      color: #010101;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #F7F7F7;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #home {
+      background-color: #f4f4f4;
+    }
+
+    #gallery {
+      background-color: #e2e2e2;
+    }
+
+    #video {
+      background-color: #f4f4f4;
+    }
+
+    #contact {
+      background-color: #e2e2e2;
+    }
+
+    footer {
+      background-color: #FFF;
+      color: #010101;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001; /* Ensure it stays on top */
+    }
+
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #575757;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple one-page website created with HTML and CSS.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+      <img src="https://as2.ftcdn.net/jpg/03/00/08/79/1000_F_300087971_5fjOrm3KnTc4vbcqBUIKgyIGcCL7REeM.jpg" alt="Placeholder Image 1">
+      <img src="https://images.pexels.com/photos/4207892/pexels-photo-4207892.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1000" alt="Placeholder Image 2">
+      <img src="https://media.istockphoto.com/id/1405772777/photo/home-interior-in-japanese-style-wall-mockup-in-living-room-background.jpg?s=612x612&w=0&k=20&c=cj7nLojll4d3kZsMcm7wQQvCateeBhYqmkuyBPod_YQ=" alt="Placeholder Image 3">
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <h2>Featured Video</h2>
+    <iframe width="560" height="315" src="https://media.gettyimages.com/id/1389640058/video/painting-beige-colour-on-white-background.mp4?s=mp4-640x640-gi&k=20&c=Fb4YND7Rk_wwnNkMFlSudO5jsPqA3AbZ1R2USEUneFI=" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My One-Page Website</p>
+  </footer>
+
+  <!-- Lightbox (Modal) -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Full-Size Image">
+  </div>
+
+  <script>
+    // Get all the images
+    const galleryImages = document.querySelectorAll('.gallery img');
+    
+    // Open the lightbox
+    function openLightbox(imageSrc) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = imageSrc;
+      lightbox.style.display = 'flex';
+    }
+
+    // Close the lightbox
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
+    }
+
+    // Add event listeners to images
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        openLightbox(img.src);
+      });
+    });
+  </script>
+
+</body>
+</html>
