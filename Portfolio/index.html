@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatima – Advanced Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style>
+      /* Custom styles if needed */
+    </style>
+  </head>
+  <body class="SiteBackground">
+    <!-- Navigation Bar -->
+    <nav class="HeaderNavigation">
+      <a class="nav-link active" href="#WelcomeSection">Home</a>
+      <a class="nav-link" href="#GallerySection">Work</a>
+      <a class="nav-link" href="#BioSection">Story</a>
+      <a class="nav-link" href="#CodeSection">Code</a>
+      <a onclick="showContactForm()" ondblclick="hideContactForm()" class="nav-link contact-trigger">Contact</a>
+    </nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Website Title</title>
-  <link rel="stylesheet" href="css/styles.css"> 
-</head>
+    <!-- Welcome Section with Background Video -->
+    <section id="WelcomeSection">
+      <video autoplay muted loop id="BgVideoPlayer">
+        <source src="https://cdn.pixabay.com/video/2025/04/29/275633_large.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </section>
 
-<body class="fade-in">
-  <!-- Navigation -->
-  <nav class="HeaderNavigation">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+    <!-- Hero Text Container -->
+    <div class="HeroTextContainer">
+      <h1 class="light-text">Hello. My name is Fatima AlBashar.</h1>
+      <strong>
+        <p class="centered-text intro-quote">
+          Welcome to Portfolio.<br />
+          I'm a creative Software Developer with a love for code, user experiences, and meaningful design.<br /><br />
+          Take a look around — and let's build something incredible together and contact me! 
+        </p>
+      </strong>
+    </div>
 
-  <!-- Hero Section (Video Background) -->
-  <section class="HeroTextContainer">
-    <video id="BgVideoPlayer" autoplay loop muted>
-      <source src="your-video.mp4" type="video/mp4">
-    </video>
-    <h1>Welcome to Our Website</h1>
-    <p>Explore our services and get in touch with us.</p>
-  </section>
+    <!-- Gallery Section -->
+    <section id="GallerySection">
+      <div class="GalleryBackground">
+        <h2>Featured Work</h2>
+        <div class="SlideshowWrapper">
+          <!-- Slideshow Items -->
+          <div class="SlideItem fade-effect" style="display: block">
+            <img class="GalleryImage" src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg" alt="Creative workspace" />
+            <div class="caption">Let’s collaborate on your next big idea.</div>
+          </div>
+          <div class="SlideItem fade-effect" style="display: none">
+            <img class="GalleryImage" src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg" alt="Web languages" />
+            <div class="caption">Fluent in HTML, CSS & JavaScript — the essentials of the modern web.</div>
+          </div>
+          <div class="SlideItem fade-effect" style="display: none">
+            <img class="GalleryImage" src="https://cdn.pixabay.com/photo/2019/05/14/17/07/web-development-4202909_1280.png" alt="Python development" />
+            <div class="caption">Solving problems with Python, one elegant script at a time.</div>
+          </div>
+          <div class="SlideItem fade-effect" style="display: none">
+            <img class="GalleryImage" src="https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg" alt="Contact Me" />
+            <div class="caption">
+              <a class="light-text contact-trigger" onclick="showContactForm()">Let’s talk about your project!</a>
+            </div>
+          </div>
 
-  <!-- Showcase Section (Slideshow) -->
-  <section class="GalleryBackground">
-    <div class="SlideshowWrapper">
-      <div class="SlideItem">
-        <img src="image1.jpg" alt="Image 1" class="GalleryImage">
-        <div class="caption">Image Caption 1</div>
+          <!-- Navigation Buttons -->
+          <a class="PrevButton" onclick="navigateSlides(-1)">&#10094;</a>
+          <a class="NextButton" onclick="navigateSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Indicator Dots -->
+        <br />
+        <div style="text-align: center">
+          <span class="IndicatorDot active" onclick="selectSlide(1)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(2)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(3)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(4)"></span>
+        </div>
       </div>
-      <div class="SlideItem">
-        <img src="image2.jpg" alt="Image 2" class="GalleryImage">
-        <div class="caption">Image Caption 2</div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="ContentRow" id="BioSection">
+      <div class="InfoColumn TextColumn">
+        <h1>My Story</h1>
+        <p>
+          I blend creativity and code to build digital experiences that resonate.<br />
+          From UI/UX to backend logic, I’m continuously learning, building, and collaborating.<br /><br />
+          <a onclick="showContactForm()" class="contact-trigger">Let’s connect</a> and explore how I can help.
+        </p>
       </div>
-      <div class="SlideItem">
-        <img src="image3.jpg" alt="Image 3" class="GalleryImage">
-        <div class="caption">Image Caption 3</div>
+      <div class="InfoColumn ImageColumn">
+        <img src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg" alt="working" />
       </div>
-      <span class="PrevButton">&#10094;</span>
-      <span class="NextButton">&#10095;</span>
-    </div>
-  </section>
+    </section>
 
-  <!-- Content Section (About and GitHub) -->
-  <section class="ContentRow">
-    <div class="InfoColumn TextColumn">
-      <h1>About Us</h1>
-      <p>We are a company that offers innovative solutions.</p>
-    </div>
-    <div class="ImageColumn">
-      <img src="team-photo.jpg" alt="Our Team">
-    </div>
-  </section>
+    <!-- Code Section -->
+    <section class="ContentRow" id="CodeSection">
+      <div class="InfoColumn TextColumn">
+        <h1>Code & Projects</h1>
+        <p>Explore a sample of my open source work and personal builds:</p>
+        <p class="centered-text">
+          <a href="https://github.com/Fatima-Albashar" target="_blank" rel="noopener noreferrer">Visit My GitHub</a>
+        </p>
+      </div>
+      <div class="InfoColumn ImageColumn">
+        <a href="https://github.com/Fatima-Albashar" target="_blank" rel="noopener noreferrer">
+          <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt="GitHub Logo" />
+        </a>
+      </div>
+    </section>
 
-  <!-- Contact Form Button -->
-  <button class="ContactPopupButton">Contact Us</button>
+    <!-- Contact Form Area -->
+    <section id="ContactFormArea">
+      <button onclick="showContactForm()" class="ContactPopupButton">GET IN TOUCH</button>
+      <div class="ModalForm" id="ContactModalContainer" ondblclick="hideContactForm()" style="display: none">
+        <form action="https://formspree.io/f/your_form_id" method="POST" class="ModalContent">
+          <h1>Let's Talk</h1>
+          <label for="contact_name"><b>Name</b></label>
+          <input type="text" placeholder="Your Name" name="name" id="contact_name" required />
+          <label for="contact_phone"><b>Phone (Optional)</b></label>
+          <input type="tel" placeholder="Your Phone Number" name="phone" id="contact_phone" />
+          <label for="contact_email"><b>Email</b></label>
+          <input type="email" placeholder="Your Email Address" name="email" id="contact_email" required />
+          <label for="contact_message"><b>Message</b></label>
+          <textarea placeholder="Your Message" name="message" id="contact_message" required rows="4"></textarea>
+          <button type="submit" class="SubmitButton">SEND</button>
+          <button type="button" class="CloseButton" onclick="hideContactForm()">CLOSE</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- Contact Form Modal -->
-  <div class="ModalForm">
-    <div class="ModalContent">
-      <h1>Contact Us</h1>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit" class="SubmitButton">Submit</button>
-        <button type="button" class="CloseButton">Close</button>
-      </form>
-    </div>
-  </div>
+    <!-- Footer Section -->
+    <footer class="SiteFooter">
+      <p class="centered-text">
+        &copy; 2025 | Made by
+        <a href="https://github.com/Fatima-Albashar" target="_blank" rel="noopener noreferrer">Fatima AlBashar</a> |
+        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="SiteFooter">
-    <p>&copy; 2025 Your Company. All rights reserved.</p>
-    <a href="#privacy">Privacy Policy</a>
-  </footer>
-
-  <script>
-    // JavaScript for Modal (Optional)
-    document.querySelector('.ContactPopupButton').addEventListener('click', function () {
-      document.querySelector('.ModalForm').style.display = 'block';
-    });
-
-    document.querySelector('.CloseButton').addEventListener('click', function () {
-      document.querySelector('.ModalForm').style.display = 'none';
-    });
-  </script>
-</body>
-
+    <!-- External JS -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
