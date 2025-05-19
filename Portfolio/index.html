@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Title</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body class="fade-in">
+  <!-- Navigation -->
+  <nav class="HeaderNavigation">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <!-- Hero Section (Video Background) -->
+  <section class="HeroTextContainer">
+    <video id="BgVideoPlayer" autoplay loop muted>
+      <source src="your-video.mp4" type="video/mp4">
+    </video>
+    <h1>Welcome to Our Website</h1>
+    <p>Explore our services and get in touch with us.</p>
+  </section>
+
+  <!-- Showcase Section (Slideshow) -->
+  <section class="GalleryBackground">
+    <div class="SlideshowWrapper">
+      <div class="SlideItem">
+        <img src="image1.jpg" alt="Image 1" class="GalleryImage">
+        <div class="caption">Image Caption 1</div>
+      </div>
+      <div class="SlideItem">
+        <img src="image2.jpg" alt="Image 2" class="GalleryImage">
+        <div class="caption">Image Caption 2</div>
+      </div>
+      <div class="SlideItem">
+        <img src="image3.jpg" alt="Image 3" class="GalleryImage">
+        <div class="caption">Image Caption 3</div>
+      </div>
+      <span class="PrevButton">&#10094;</span>
+      <span class="NextButton">&#10095;</span>
+    </div>
+  </section>
+
+  <!-- Content Section (About and GitHub) -->
+  <section class="ContentRow">
+    <div class="InfoColumn TextColumn">
+      <h1>About Us</h1>
+      <p>We are a company that offers innovative solutions.</p>
+    </div>
+    <div class="ImageColumn">
+      <img src="team-photo.jpg" alt="Our Team">
+    </div>
+  </section>
+
+  <!-- Contact Form Button -->
+  <button class="ContactPopupButton">Contact Us</button>
+
+  <!-- Contact Form Modal -->
+  <div class="ModalForm">
+    <div class="ModalContent">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="SubmitButton">Submit</button>
+        <button type="button" class="CloseButton">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="SiteFooter">
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <a href="#privacy">Privacy Policy</a>
+  </footer>
+
+  <script>
+    // JavaScript for Modal (Optional)
+    document.querySelector('.ContactPopupButton').addEventListener('click', function () {
+      document.querySelector('.ModalForm').style.display = 'block';
+    });
+
+    document.querySelector('.CloseButton').addEventListener('click', function () {
+      document.querySelector('.ModalForm').style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
